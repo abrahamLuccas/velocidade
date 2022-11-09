@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.bloco{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 256px;
+    width: calc(1536px/ 6);
+    background: url(./person.png);
+    animation:person 1s steps(6) infinite;
+}
+
+@keyframes person{
+    from{
+        background-position: 0;
+    }
+    to{
+        background-position: -1536px;
+    }
+}

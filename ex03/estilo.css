@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+   .bloco {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    height: 256px;
+    width: calc(256px/ 1);
+    background: url(./wheel.png);
+    animation: animate 1s linear infinite;
+   }
+
+   @keyframes animate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+   }
