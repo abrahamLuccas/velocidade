@@ -1,0 +1,151 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    align-items: center;
+}
+
+/*CAIXA*/
+
+.caixa1{
+    background-color: rgb(228, 245, 245);
+    width: 200px;
+    height: 150px;
+    position: relative;
+}
+
+/*BOLAS*/
+.vermelho
+{
+    background-color: #F63D3A;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: relative;
+    display: inline-flex;
+    left: 35px;
+    top: 10px;
+    animation-name: bolaV;
+    animation:bolaV 5s infinite;
+}
+.azul
+{
+    background-color: #19A68C;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: relative;
+    float: right;
+    right: 40px;
+    top: 10px;
+    animation-name: bolaA;
+    animation:bolaA 5s infinite;
+}
+.laranja
+{
+    background-color: #FDA543;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: relative;
+    display: inline-flex;
+    top:  80px;
+    left: -20px;
+    animation-name: bolaL;
+    animation:bolaL 5s infinite;
+}
+.preto
+{
+    background-color: #193B48;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: relative;
+    float: right;
+    top: 26px;
+    right: 40px;
+    animation-name: bolaP;
+    animation:bolaP 5s infinite;
+}
+
+/*ANIMAÇÕES*/
+
+/*bola vermelha*/
+@keyframes bolaV {
+    0% {}
+
+    25% {        
+        left: 115px;
+        top: 25px;
+        }
+
+    50% {        
+        top: 90px;
+        left: 50px;
+        }
+
+    100% {
+        top: 10px;
+        left: 95px;
+        }
+}
+
+/*bola azul*/
+@keyframes bolaA {
+    0% {}
+
+    25% {        
+        top: 80px;
+        right: 50px;
+        }
+
+    50% {        
+        top: 30px;
+        right: 120px;
+        }
+
+    100% {
+        top: 70px;
+        }
+}
+
+/*bola laranja*/
+@keyframes bolaL {
+    0% {}
+
+    25% {        
+        top: 10px;
+        left: 5px;
+        }
+
+    50% {        
+        top: 70px;
+        left: 60px;
+        }
+
+    100% {
+        top: 30px;
+        }
+}
+
+/*bola preta*/
+@keyframes bolaP {
+    0% {}
+
+    25% {
+        right: 110px;
+        top: 10px;
+        }
+
+    50% {
+        right: 55px;
+        top: -45px;
+        }
+
+    100%{
+        top: 35px;
+        right: 100px;
+        }
+}
