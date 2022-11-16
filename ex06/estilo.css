@@ -1,0 +1,35 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Abel', 'sans-serif';
+    background-color: white;
+}
+
+section{
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.form-body{
+    position: relative;
+    background-color: rgb(243, 189, 243);
+    width: 350px;
+    height: 500px;
+    justify-content: space-between;
+    margin-top: 90px;
+    border-radius: 25px;
+    box-shadow: 5px 4px 7px black;
+}
+
+.form-title{
+    text-align: center;
+}
+
+.campos{
+    justify-content: justify;
+}
