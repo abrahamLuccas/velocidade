@@ -32,4 +32,47 @@ section{
 
 .campos{
     justify-content: justify;
+    margin-bottom: 50px;
+}
+
+/*LABELS*/
+.email{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+.password{
+    display: flex;
+    justify-content: center;
+    padding: 5px;}
+.passwordC{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+#submit{
+    display: flex;
+    float: right;
+    font-family: 'Abel', 'sans-serif';
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 70px;
+    margin-top: 5px;
+    width: 200px;
+    height: 30px;
+}
+
+/*FEEDBACK*/
+.feedback{
+    background-color: white;
+    width: 250px;
+    height: 100px;
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+    justify-content: center;
+    
+    
 }

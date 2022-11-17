@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
+    <script src="./task06.js"></script>
     <title>Formulário</title>
 </head>
 <body>
@@ -13,21 +14,33 @@
             <div class="form-title">
                 <h1>Formulário Validação</h1>
             </div>
-            <form target="_blank">
+            <form name="formulario" onsubmit="validar()">
                 <div class="campos">
-                    <label for="email">E-mail:</label><input type="text" name="email" id="email"><br>
-                    <label for="password">Password:</label><input type="password" name="password" id="password"><br>
-                    <label for="passwordConfirmation">Password Confirmation:</label><input type="password" name="passwordConfirmation" id="passwordConfirmation">
-                    <button type="submit">Save</button>
+                    <div class="email">
+                    <label for="email">E-mail:</label><input type="email" name="email" id="email"><br>
+                    </div>
+
+                    <div class="password">
+                    <label for="password">Password:</label><input type="password" name="password" onkeyup="validSenha()" minlength="8" id="password"><br>
+                    </div>
+
+                    <div class="passwordC">
+                    <label for="passwordConfirmation">Password Confirmation: </label><input type="password" name="passwordConfirmation" id="passwordC" minlength="8"><br>
                 </div>
-                <div class="aviso">
+                
+                <button type="submit" id="submit">Save</button>
+            </div>
+                <div class="avisos">
                     <ul>
                         <li>Password and Password confirmation have the same content</li>
-                        <li>A minimum of 8 characters</li>
-                        <li>Has at least one lower case character</li>
-                        <li>Has at least one upper case character</li>
-                        <li>Has at least one number</li>
+                        <li id="min">A minimum of 8 characters</li>
+                        <li id="lower">Has at least one lower case character</li>
+                        <li id="upper">Has at least one upper case character</li>
+                        <li id="number">Has at least one number</li>
                     </ul>		
+                </div>
+                <div class="feedback" id="feedback" onkeyup="validConfirma()">
+                    Feedback
                 </div>
             </form>
         </div>
