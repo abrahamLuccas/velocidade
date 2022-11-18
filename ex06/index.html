@@ -14,32 +14,33 @@
             <div class="form-title">
                 <h1>Formulário Validação</h1>
             </div>
-            <form name="formulario" onsubmit="validar()">
+            <form name="formulario">
                 <div class="campos">
                     <div class="email">
-                    <label for="email">E-mail:</label><input type="email" name="email" id="email"><br>
+                    <label for="email">E-mail:</label><input type="email" required onkeyup="validarEmail()" name="email" id="email"><br>
                     </div>
 
                     <div class="password">
-                    <label for="password">Password:</label><input type="password" name="password" onkeyup="validSenha()" minlength="8" id="password"><br>
+                    <label for="password">Password:</label><input type="password" name="password" onkeyup="validSenha()" required minlength="8" id="password">
+                    <input type="checkbox" onclick="mostrar()">Show Password<br>
                     </div>
 
                     <div class="passwordC">
-                    <label for="passwordConfirmation">Password Confirmation: </label><input type="password" name="passwordConfirmation" id="passwordC" minlength="8"><br>
+                    <label for="passwordConfirmation">Password Confirmation: </label><input type="password" required onkeyup="validConfirma()" name="passwordConfirmation" id="passwordC" minlength="8"><br>
                 </div>
                 
                 <button type="submit" id="submit">Save</button>
             </div>
                 <div class="avisos">
                     <ul>
-                        <li>Password and Password confirmation have the same content</li>
+                        <li id="pass">Password and Password confirmation have the same content</li>
                         <li id="min">A minimum of 8 characters</li>
                         <li id="lower">Has at least one lower case character</li>
                         <li id="upper">Has at least one upper case character</li>
                         <li id="number">Has at least one number</li>
                     </ul>		
                 </div>
-                <div class="feedback" id="feedback" onkeyup="validConfirma()">
+                <div class="feedback" id="feedback">
                     Feedback
                 </div>
             </form>

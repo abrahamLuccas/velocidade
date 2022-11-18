@@ -21,37 +21,59 @@ function validSenha(){
     else{        
         num.style.color = 'red'
     }
+
 }
+
+// checkbox mostra a senha
+function mostrar(){
+    var senha = document.getElementById('password')
+    if(senha.type === "password"){
+        senha.type = "text";
+    }
+    else {
+        senha.type = "password"
+    }
+}
+
 
 function validConfirma(){
     var senha = document.getElementById('password') 
     var senhaC = document.getElementById('passwordC') 
     var feedB = document.getElementById('feedback')
+    var min = document.getElementById('min')
+    var senhaTxt = document.getElementById('pass')
 
-    if(senha != senhaC){
-        feedB.innerHTML = 'Senha Incorreta!'
-    }
-}
-
-function validar(){
-    //pega o valor pelo id
-    var email = document.getElementById("email");
-    var password = document.getElementById("password");
-    var passwordC = document.getElementById("passwordC");
-    var feedB = document.getElementById('feedback')
-
-    //verifica os campos
-    if(email.value == ""){
-        ("O email não foi preenchido!");
-    }
-    else if(password.value == ""){
-        alert("A senha não foi preenchida!")
-    }
-    else if(passwordC.value == ""){
-        alert("A confirmação de senha não foi preenchida!")
+    if(senha.value.length >= 8 && senhaC.value.length >= 8){
+            min.style.color = 'green'
+            feedB.innerHTML = 'Feedback'
+            if(senha.value != senhaC.value){
+                feedB.innerHTML = 'As senhas não são iguais!'
+                senhaTxt.style.color = 'red'
+            }
+            else{
+                senhaTxt.style.color = 'green'
+                feedB.innerHTML = '<center>Todos os requisitos da senha foram atendidos!'
+            }
     }
     else{
+        feedB.innerHTML = '<center>A senha precisa ter 8 caracteres ou mais!'
+        min.style.color = 'red'
+    }
+    
 
+
+}
+
+function validarEmail(){
+    //pega o valor pelo id
+    var email = document.getElementById("email");
+    var feedB = document.getElementById('feedback')
+
+    if(email.value == ""){
+        feedB.innerHTML = 'Insira um email!'
+    }
+    else{
+        feedB.innerHTML = 'Feedback'
     }
 
 }
